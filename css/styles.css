@@ -1,0 +1,302 @@
+/* General settings ----------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'roboto1';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'roboto2';
+    src: url('../fonts/Roboto-Light.ttf');
+}
+:root{
+    --backColor: wheat;
+    --secColor: #f0f0f0;
+}
+
+/* Header settings -----------------------------------*/
+
+#header{
+    position: relative; 
+    width: 100vw;
+    min-width: 1000px;
+    height: 100px;
+    background: var(--secColor); 
+}
+#logo{
+    position: absolute;    
+    width: 150px;
+    left: -60%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+#navbar{
+    position: absolute; 
+    width: 520px;
+    height: 30px;
+    text-align: center;
+    left: 0;
+    right: -40%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    word-spacing: 10px;
+}
+#header a{
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* Central panel settings ----------------------------*/
+
+#main-view{
+    position: relative; 
+    background: url(../images/Back_1.jpg);
+    background-size: cover;
+    width: 100vw;
+    min-width: 1000px;
+    height: 550px;
+}
+#access-pan{
+    position: absolute;    
+    width: 900px;
+    height: 220px;
+    left: 0;
+    right: 0;
+    top: -50px;
+    bottom: 0;
+    margin: auto;
+    background: rgba(10,30,30,0.8);
+    transition: all 0.5s linear;
+}
+#access-pan:hover{  /* with support for different browser */
+    -webkit-box-shadow: 0 0 30px 5px rgba(255,255,255,0.2);    
+}
+
+h1{
+    color: white;
+    text-align: center;
+    word-spacing: 10px;
+    margin-top: 30px;
+    font-family: 'roboto1';
+    letter-spacing: 1px;
+}
+h2{
+    color: white;
+    text-align: center;
+    word-spacing: 7px;
+    margin-top: 10px;
+    font-family: 'roboto2';
+    letter-spacing: 1px;
+}
+#servicios{
+    /*position: absolute;    */
+    position: relative;
+    width: 90%;
+    height: 80px;
+    border-top: 1px solid white;
+    left: 0;
+    right: 0;
+    /*top: 140px;*/
+    top: 40px;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    word-spacing: 21px;
+    color: whitesmoke;
+}
+#servicios a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: 'roboto2';
+    word-spacing: 2px;
+    position: relative;
+    top: 10px;
+    z-index: 1;
+}
+#servicios a:hover{
+    transition-property: text-shadow;
+    text-shadow: 0px 0px 15px white;
+    color: pink;
+    transition-duration: 0.2s;
+    transition: ease-in(0.25, 0.46, 0.45, 0.94);
+}
+.square-icon{
+    position: relative;
+    font-size: 5px;
+    color:whitesmoke;
+    top: 5px;
+}
+
+#cyan-box{
+    position: relative;
+    animation-name: colorful;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    top: -20px;
+    width: 36%;
+    height: 35px;
+    border-radius: 40%;
+    z-index: 0;
+}
+
+@keyframes colorful{
+    0% {
+        right: -400px;
+        background: transparent;
+    }    
+    100% {
+        right: -525px;
+        background: rgba(0, 200, 250, 0.2);
+    }
+}
+
+.live{
+    position: relative;
+    animation-name: colortext;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    position: relative;
+    text-align: center;
+    top: -10px;
+    z-index: 0;
+    color: transparent;
+}
+@keyframes colortext{
+    0% {
+        right: -40px;
+        color: transparent;
+    }    
+    100% {
+        right: -265px;
+        color: goldenrod;
+    }
+}
+/* Footer settings --------------------------------*/
+
+#footer{
+    position: absolute; 
+    width: 100vw;
+    min-width: 1000px;
+    height: 100px;
+    background: var(--secColor); 
+}
+#footer-pan{
+    position: absolute;
+    width: 80vw;
+    min-width: 900px;
+    height: 80px;
+    background: var(--secColor);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+#footer a{
+    color: inherit;
+    text-decoration: none;
+}
+.footer-sides{
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+}
+.footer-center-left{
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    border-left: 1px solid grey;
+}
+.footer-center-right{
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    border-right: 1px solid grey;
+}
+
+/* LEFT block --------------------------*/
+p.footer-left{
+    position: relative; 
+    top: 30px;
+    right: -30%;
+}
+
+/* LEFT CENTER block -------------------*/
+p.footer-c-left{
+    position: relative; 
+    top: 30px;
+    right: -40%;
+}
+
+/* RIGHT CENTER block ------------------*/
+
+p.footer-c-right{
+    position: relative; 
+    right: -15%;
+    line-height: 40px;
+}
+span.llamadas{
+    position: relative;
+    font-size: 25px;
+    color:cornflowerblue;
+    top: 4px;
+}
+span.whatsapp{
+    position: relative;
+    font-size: 25px;
+    color:green;
+    top: 4px;
+}
+
+/* RIGHT  block ------------------------*/
+p.footer-right{
+    position: relative; 
+    left: 20%;
+    line-height: 25px;
+    word-spacing: 5px;
+}
+span.instagram{
+    position: relative;
+    font-size: 20px;
+    color:hotpink;
+    top: 3px;
+}
+span.facebook{
+    position: relative;
+    font-size: 20px;
+    color:royalblue;
+    top: 3px;
+}
+span.mail{
+    position: relative;
+    font-size: 20px;
+    color:firebrick;
+    top: 3px;
+}
